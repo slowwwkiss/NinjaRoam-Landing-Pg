@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
 
 
 body {
-    background-color: #f0f0f0;
+    background-color: #1f2021;
   }
-  
-  #video-bg {
-    /* Add styles for video background */
-  }
+
+p{
+  color: rgb(218, 216, 216);
+  font-family: "Indie Flower", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-family: "Walter Turncoat", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3{
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
   
   .feature-card {
     margin-bottom: 20px;
@@ -28,6 +49,7 @@ body {
   }
 
 
+  /* ------------navbar stuff ------------- */
   .navbar-nav .nav-item .nav-link {
     min-width: 100px;
     font-family: "Gloria Hallelujah", cursive;
@@ -40,18 +62,16 @@ body {
   
   .navbar {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.6); 
+    background-color: rgba(75, 74, 74, 0.6); 
     backdrop-filter: blur(5px); /* Adding blur effect */
   }
   
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Adjust font family */
   }
-  
-  
 
 
-  
+  /* -----  section 1 (vid) ---------- */
   #video-bg {
     position: relative;
     width: 100%;
@@ -70,5 +90,246 @@ body {
     height: auto;
   }
   
+
+  /* ------------- features part-----------  */
+  .feature-card1 img , .feature-card2 img {
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
   
+  /* Add tilt effect 1 */
+  .feature-card1:nth-child(odd) img {
+    transform: rotate(-6deg);
+  }
   
+  .feature-card1:nth-child(even) img {
+    transform: rotate(8deg);
+  }
+
+  
+  /* Add tilt effect 2 */
+  .feature-card2:nth-child(odd) img {
+    transform: rotate(6deg);
+  }
+  
+  .feature-card2:nth-child(even) img {
+    transform: rotate(-8deg);
+  }
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .feature-card1 img {
+      max-width: 80%;
+    }
+    .emoji-card {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 626px) {
+    #video-bg video {
+      width: 70vh; /* Adjust the width relative to viewport height */
+      max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .feature-card1 img {
+      max-width: 100%;
+    }
+    .arrow1 , .arrow2{
+       height: 85px;
+        width: 120px;
+    }
+  }
+  
+
+  
+.section1-2{
+  background:  #1f2021  !important;
+}
+  
+.def{
+  color: rgb(155, 221, 221);
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.section2{
+    background: linear-gradient(to bottom, #1f2021 , #222831 );
+}
+.section2-5{
+    background: #222831 !important;
+}
+.section3{
+    background: linear-gradient(to bottom, #222831 , rgb(63, 75, 80) );
+}
+.section4{
+    background: linear-gradient(to bottom, rgb(63, 75, 80)  , #6a878b  ) !important;
+}
+.section5{
+    background: linear-gradient(to bottom, #6a878b  , #92C7CF  ) !important;
+}
+.section6{
+    background: #92C7CF  !important;
+}
+
+.falling-img{
+    height: 160px;
+    width: 175px;
+}
+
+.my-quote{
+  color: rgb(255, 255, 255) !important;
+  font-family: "Swanky and Moo Moo", cursive;
+  font-size: 2.8rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.social-images{
+  height: 130px;
+  width: 130px;
+  margin-top: 50px;
+}
+  /* styles for cards using intersecting obsv */
+  .emoji-card {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  .emoji-card.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .emoji-card.animated {
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+/* Flex container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* Flex items */
+.item {
+  flex: 1 1 45%;
+  max-width: calc(50% - 20px); /* Adjust this value to change the gap width */
+}
+
+/* Ensure images don't exceed their container */
+.item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #39b23d; /* Green color */
+  border: 3px solid #207a47; /* Darker green border */
+  border-radius: 8px;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background: linear-gradient(135deg, #357a39, #4CAF50); /* Gradient background */
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+  border-color: #228B22; /* Lighter green border on hover */
+}
+
+/* Button Highlight Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  transition: transform 0.5s;
+  z-index: 0;
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Flex container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.arrow1 , .arrow2{
+  position: relative;
+   height: 115px;
+    width: 180px;
+}
+.arrow1{
+  left:-22vh;
+}
+.arrow2{
+  left:22vh;
+  transform: scaleX(-1) scaleY(-1);
+}
+
+/* Ensure images and videos don't exceed their containers */
+.item img,
+.item video {
+  flex: 1 1 45%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(33, 34, 35, 0.038); /* Soft shadow */
+}
+
+
+@media (max-width: 510px) {
+    .arrow1 , .arrow2{
+       height: 25px;
+        width: 40px;
+    }
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .item {
+      flex: 1 1 auto;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }

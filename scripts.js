@@ -1,19 +1,28 @@
-
-
-// Intersection Observer for Feature Cards
-const featureCards = document.querySelectorAll('.feature-card');
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    }
-  });
+//     emoji  intersecting observer part    
+$(document).ready(function(){
+  $('.carousel').carousel();
 });
 
-featureCards.forEach(card => {
-  observer.observe(card);
+//intersecting observer for cards
+const emojiCards = document.querySelectorAll('.emoji-card');
+let observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible', 'animated');
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+emojiCards.forEach(card => observer.observe(card));
+
+// Disconnecting observer after all elements hav animated
+window.addEventListener('scroll', () => {
+  const visibleElements = document.querySelectorAll('.emoji-card.visible');
+  if (visibleElements.length === emojiCards.length) {
+    observer.disconnect();
+  }
 });
 
 // Hover Effect for Play Game Button
