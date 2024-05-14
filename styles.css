@@ -115,6 +115,13 @@ h3{
   .feature-card2:nth-child(even) img {
     transform: rotate(-8deg);
   }
+
+  .feature-card1 img:hover,
+.feature-card2 img:hover {
+  box-shadow: 3px 12px 8px 3px rgba(255, 255, 255, 0.373); /* Whitish shadow */
+}
+
+
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .feature-card1 img {
