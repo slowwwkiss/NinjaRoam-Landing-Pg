@@ -196,10 +196,9 @@ h4{
     }
   }
   
-
   
 .section1-2{
-  background:  #1f2021  !important;
+  background:  #1f2021  !important; 
 }
   
 .def{
@@ -369,9 +368,28 @@ h4{
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(33, 34, 35, 0.038); /* Soft shadow */
 }
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 800px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
+
+.scroll-img {
+  width: 100%;
+  height: 100%;
+  display: block; /* Ensure the image fills the entire width */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
 
 .quotation {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+  padding: 20px;
 }
 
 .quotation::before,
@@ -399,6 +417,11 @@ h4{
   border-radius: 10px; /* Example border radius */
 }
 
+@media screen and (max-width: 1050px) {
+  .scroll-img {
+    display: none; /* Hide the scroll image */
+  }
+}
 
 @media (max-width: 800px) {
     .arrow1 , .arrow2{
