@@ -127,10 +127,10 @@ body.night {
 .phone-stuff{
   display: none;
   position: fixed;
-  top: 5%;
-  left: 50%;
+  top: 15%;
+  left: 17%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 20px;
   text-decoration: none;
   color: #000;
   font-family: "Walter Turncoat", cursive;
