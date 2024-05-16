@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
 
 body {
     background-color: #1f2021;
@@ -18,13 +19,26 @@ p{
   font-size: 1.7rem;
 }
 
+h1{
+  font-family: "Splash", cursive;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 5.3rem;
+
+}
 h2 {
   font-family: "Walter Turncoat", cursive;
   font-weight: 600;
   font-style: normal;
 }
+.diff-h2{
+  font-family: "Shalimar", cursive !important;
+  font-weight: 400;
+  font-size: 4rem;
+  font-style: normal;
+}
 
-h3{
+h4{
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
   font-style: normal;
@@ -71,24 +85,56 @@ h3{
   }
 
 
-  /* -----  section 1 (vid) ---------- */
-  #video-bg {
+  .flex-container1 {
+    background-color: #f9f9f9;
+    display: flex;
+  }
+
+  /* Left column */
+  .left-column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .left-column img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Right column */
+  .right-column {
+    flex: 1;
     position: relative;
-    width: 100%;
-    height: 100vh; /* Fixed to screen height */
     overflow: hidden;
   }
-  
-  #video-bg video {
+
+  /* Video container */
+  #video-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    top: 0;
+    left: 150px;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    align-items: center;
+    align-content: center;
   }
+
+  /* Video */
+  video {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    border: 2.4px solid #3130303e; /* Add border */
+    border-radius: 20px; /* Add border radius */
+    box-shadow: 5px 12px 8px 4px rgba(0, 0, 0, 0.26), 3px 6px 20px 2px rgba(0, 0, 0, 0.24); /* Add shadow */
+    outline: none; /* Remove default focus outline */
+  }
+  
+
+
+
   
 
   /* ------------- features part-----------  */
@@ -324,13 +370,42 @@ h3{
   box-shadow: 0px 4px 8px rgba(33, 34, 35, 0.038); /* Soft shadow */
 }
 
+.quotation {
+  position: relative;
+}
 
-@media (max-width: 510px) {
+.quotation::before,
+.quotation::after {
+  content: '\201C'; /* Unicode for left double quotation mark */
+  font-size: 64px; /* Adjust size as needed */
+  color: #888; /* Color of the quotation marks */
+  position: absolute;
+}
+
+.quotation::before {
+  left: -20px; /* Adjust position as needed */
+  top: -10px; /* Adjust position as needed */
+}
+
+.quotation::after {
+  right: -20px; /* Adjust position as needed */
+  bottom: -10px; /* Adjust position as needed */
+}
+
+/* Example styling for the content */
+.content {
+  padding: 20px;
+  background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.123) , transparent) ; /* Example background color */
+  border-radius: 10px; /* Example border radius */
+}
+
+
+@media (max-width: 800px) {
     .arrow1 , .arrow2{
        height: 25px;
         width: 40px;
     }
-    .flex-container {
+    .flex-container1 {
       flex-direction: column;
       align-items: center;
     }
@@ -339,4 +414,15 @@ h3{
       max-width: 100%;
       margin-bottom: 40px;
     }
+  }
+
+  @media (max-width: 500px) {
+    .arrow1{
+      left:-10vh;
+    }
+    .arrow2{
+      left:10vh;
+      transform: scaleX(-1) scaleY(-1);
+    }
+
   }
