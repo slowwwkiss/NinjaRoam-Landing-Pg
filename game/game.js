@@ -19,7 +19,7 @@ const firebaseConfig = {
   
   let ninjasound = {
     push : new Howl({
-      src: ['/sounds/ninja-soundtrack.wav'],
+      src: ['sounds/ninja-soundtrack.wav'],
       loop: true ,
       volume : 0.17,
     })
@@ -28,13 +28,13 @@ const firebaseConfig = {
   
   var walkingsound = {
     push : new Howl({
-      src: ['/sounds/footsteps.mp3']
+      src: ['sounds/footsteps.mp3']
     })
   }
   
   var fallingsound = {
     push : new Howl({
-      src: ['/sounds/childs-scream-1.wav'],
+      src: ['sounds/childs-scream-1.wav'],
       volume : 0.4,
     })
   }

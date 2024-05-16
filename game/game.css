@@ -124,6 +124,20 @@ body.night {
   font-style: normal;
 }
 
+.phone-stuff{
+  display: none;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Walter Turncoat", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 #introduction,
 #perfect,
@@ -222,5 +236,13 @@ body.night {
       height: 80px; 
       font-size: 1em;
       bottom: 10px;
+  }
+
+  .back-to-home{
+    display: none;
+  }
+
+  .phone-stuff{
+    display: block;
   }
 }
