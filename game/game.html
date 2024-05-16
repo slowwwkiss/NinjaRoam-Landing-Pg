@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickman Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+    <a href="https://ninjaroam.netlify.app/" class="back-to-home">Back to Home</a>
+
+    <div class="container">
+        <div id="score"></div>
+        <div id="highscore" class="highscore">Highscore: <span id="highscore-value">0</span></div>
+
+        <div id="theme-select" class="mb-4">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="theme" class="form-label">Select Theme:</label>
+                    <select id="theme" class="form-select">
+                        <option value="day">Day Mode</option>
+                        <option value="night">Night Mode</option>
+                        <option value="spring">Spring Mode</option>
+                        <option value="ocean">Ocean Mode</option>
+                    </select>
+                </div>
+                <br>
+                <div class="col-sm-6">
+                    <label for="cap-select" class="form-label">Select Cap Color:</label>
+                    <select id="cap-select" class="form-select">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="game" width="375" height="375"></canvas>
+        <div id="introduction">Hold down the mouse to stretch out a stick</div>
+        <div id="perfect">DOUBLE SCORE</div>
+        <button id="start">START</button> 
+        <button id="restart">RESTART</button>
+
+        
+    </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="game.js"></script>
+</html>
