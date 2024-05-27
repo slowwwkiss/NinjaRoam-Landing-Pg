@@ -467,3 +467,13 @@ h4{
     }
 
   }
+
+  @media (max-width: 770px) {
+    .feature-card1 img , .feature-card2 img {
+      max-width: 76%;
+      padding-top: 20px;
+    }
+  }
+
+
+  
