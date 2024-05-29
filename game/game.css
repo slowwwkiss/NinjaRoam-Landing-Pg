@@ -243,7 +243,8 @@ body.night {
   }
 
   .phone-stuff{
-    display: block;
-    user-select: none;
+    display: none;
   }
+
+
 }

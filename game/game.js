@@ -350,7 +350,7 @@ const firebaseConfig = {
   
     startButton.addEventListener("click", function (e) {
         themeSelect.disabled = true;
-        capSelect.disabled = true;
+        capSelect.disabled = true; 
         startFlag = true;
   
         ninjasound.push.play();
