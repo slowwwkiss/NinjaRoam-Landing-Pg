@@ -7,6 +7,13 @@ body {
   margin: 0;
 }
 
+button{
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;   
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
@@ -236,6 +243,7 @@ body.night {
       height: 80px; 
       font-size: 1em;
       bottom: 10px;
+      user-select: none;
   }
 
   .back-to-home{
