@@ -6,6 +6,17 @@ body {
   height: 100%;
   margin: 0;
 }
+* {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+/* Remove blue highlight on mobile devices */
+* {
+  -webkit-tap-highlight-color: transparent; /* Safari and Chrome */
+}
 
 button{
   -webkit-user-select: none; /* Safari */
@@ -198,17 +209,11 @@ body.night {
   transition: color 0.3s;
 }
 
-
-
-
-
 @media screen and (max-width: 991px) {
   #stretch-mode {
       display: block; 
   }
 }
-
-
 /* CSS for mobile screens */
 @media (max-width: 576px) {
 
@@ -253,6 +258,4 @@ body.night {
   .phone-stuff{
     display: none;
   }
-
-
 }
